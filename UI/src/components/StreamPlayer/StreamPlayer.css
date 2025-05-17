@@ -14,3 +14,9 @@
   color: #555;
 }
 
+canvas {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  border-radius: 4px;
+}
