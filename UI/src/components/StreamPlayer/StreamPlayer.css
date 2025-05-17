@@ -1,0 +1,22 @@
+.stream-player {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.placeholder {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  color: #555;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  border-radius: 4px;
+}

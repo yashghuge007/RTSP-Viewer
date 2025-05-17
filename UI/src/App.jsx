@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { StreamPlayer } from "./components";
 
 const App = () => {
   const [inputUrl, setInputUrl] = useState("");
@@ -7,8 +8,6 @@ const App = () => {
 
   const handleAddStream = () => {
     if (!inputUrl.trim()) return;
-    console.log(streams);
-    console.log(inputUrl);
     setStreams([...streams, inputUrl.trim()]);
     setInputUrl("");
   };
@@ -24,6 +23,12 @@ const App = () => {
           onChange={(e) => setInputUrl(e.target.value)}
         />
         <button onClick={handleAddStream}>Add Stream</button>
+      </div>
+
+      <div className="grid">
+        {streams.map((url, index) => (
+          <StreamPlayer key={index} url={url} />
+        ))}
       </div>
     </div>
   );
